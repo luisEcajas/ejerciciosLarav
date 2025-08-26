@@ -39,14 +39,14 @@ class juegoController extends Controller
     
     
     public function frmFactorialNum(){
-        return view('frmFactorial');
+        return view('factorial');
     }
     public function factorialNumero(Request $request){
-    $numero = request->numero;
+    $num = $request->num;
 
     if($num > 10){
             echo "El numero debe ser menor a 10";
-            return view('frm_Factorial');
+            return view('factorial');
         }
 
         $resultado = $this->hallarFactorial($num);
@@ -64,7 +64,7 @@ class juegoController extends Controller
     //Ejercicio 3: 
 
     public function frmNotas(){
-        return view('frm_Notas');
+        return view('notas');
     }
 
     public function notas(Request $request){
@@ -77,27 +77,27 @@ class juegoController extends Controller
         if($nota1 > 5){
             echo "Hay un error en la nota 1 <br>";
             echo "Ingrese una nota entre 0 y 5 <br>";
-            return view('frm_Notas');
+            return view('notas');
         }
         if($nota2 > 5){
             echo "Hay un error en la nota 2 <br>";
             echo "Ingrese una nota entre 0 y 5 <br>";
-            return view('frm_Notas');
+            return view('notas');
         }
         if($nota3 > 5){
             echo "Hay un error en la nota 3 <br>";
             echo "Ingrese una nota entre 0 y 5 <br>";
-            return view('frm_Notas');
+            return view('notas');
         }
         if($nota4 > 5){
             echo "Hay un error en la nota 4 <br>";
             echo "Ingrese una nota entre 0 y 5 <br>";
-            return view('frm_Notas');
+            return view('notas');
         }
         if($nota5 > 5){
             echo "Hay un error en la nota 5 <br>";
             echo "Ingrese una nota entre 0 y 5 <br>";
-            return view('frm_Notas');
+            return view('notas');
         }
 
         $promedio = ($nota1 + $nota2 + $nota3 + $nota4 + $nota5)/5;
@@ -113,7 +113,7 @@ class juegoController extends Controller
      //Ejercicio 4: 
  
     public function frmMultiplicar(){
-        return view('frm_Multiplicar');
+        return view('tabla');
     }
 
     public function multiplicar(Request $request){
@@ -121,7 +121,7 @@ class juegoController extends Controller
 
         if($num > 10){
             echo "El numero debe ser menor o igual a 10";
-            return view('frm_Multiplicar');
+            return view('tabla');
         }
 
         $contador = 1;
@@ -134,7 +134,7 @@ class juegoController extends Controller
      //Ejercicio 5: 
    
     public function frm20Nums(){
-        return view('frm_20Nums');
+        return view('numeros');
     }
 
     public function F20Nums(Request $request){
