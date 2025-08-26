@@ -8,7 +8,7 @@
 <body>
     <h1>Calcular el factorial de un número</h1>
     
-    <form action="{{ route('factorial.procesar') }}" method="POST">
+    <form action="{{ route('factorial.calcular') }}" method="POST">
         @csrf
         <label for="num">Ingresa un número:</label>
         <input type="number" name="num" id="num" required min="0">
